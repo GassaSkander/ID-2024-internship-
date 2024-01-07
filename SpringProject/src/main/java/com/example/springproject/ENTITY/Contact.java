@@ -1,0 +1,26 @@
+package com.example.springproject.ENTITY;
+
+
+import lombok.*;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "Contact")
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Contact implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    private String full_name;
+    // private String phone_numbers;
+    private String email;
+}
